@@ -228,7 +228,7 @@ Given a link object, and the type of the link,
 go upstream, following links with the same type, until you find a parent node which isn't bypassed.
 If either type or original link is null, or if the upstream thread ends, return null
 */
-function handle_bypass(original_link, type, graph) {
+export function handle_bypass(original_link, type, graph) {
     if (!type || !original_link) return null;
     var link = original_link;
     if (link_is_from_subgraph_input(link)) return link
